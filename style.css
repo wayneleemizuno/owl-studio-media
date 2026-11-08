@@ -1,0 +1,23 @@
+:root {
+  --canvas: #f3f4f5; --surface: #fafaf8; --ink: #242933; --muted: #5b6370; --hairline: #d9dce1;
+  --accent: #435440; --marker: #eb6507;
+  --display: "Tenor Sans", "Avenir Next", "Segoe UI", "Noto Sans HK", system-ui, sans-serif;
+  --body: "Blinker", "Avenir Next", "Segoe UI", "Noto Sans HK", system-ui, sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --canvas: #242933; --surface: #2d333f; --ink: #f4f1ea; --muted: #b8c0cd; --hairline: #454d5b;
+    --accent: #9ead98; --marker: #ffd558; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: var(--body);
+  font-size: 1.125rem; line-height: 1.6; }
+main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+h1, h2 { font-family: var(--display); font-weight: 400; line-height: 1.2; text-wrap: balance; }
+h1 { font-size: 2.25rem; margin: 0 0 0.5rem; border-left: 0.3rem solid var(--marker); padding-left: 0.75rem; }
+h2 { font-size: 1.35rem; margin: 2.25rem 0 0.5rem; color: var(--accent); }
+p, li { max-width: 36rem; }
+.lead { color: var(--muted); margin-top: 0; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid var(--marker); outline-offset: 2px; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 1rem; }
